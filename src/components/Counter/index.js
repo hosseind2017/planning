@@ -1,8 +1,9 @@
 import React from 'react';
-import useCounterReducer from "../../redux/store/counter"
+import store from "../../redux/store"
 
 
 const Counter = () => {
+    const { useCounterReducer } = store()
     const [counterState, counterDispatch] = useCounterReducer();
     return (
         <React.Fragment>
