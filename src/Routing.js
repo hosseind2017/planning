@@ -1,4 +1,6 @@
 import React from 'react';
+import Counter from "./components/Counter"
+import store from "./redux/store"
 import { Switch, BrowserRouter as Router, Route, Link } from 'react-router-dom'
 
 const Routing = () => {
@@ -16,11 +18,11 @@ const Routing = () => {
         <Route
           path="/"
           exact
-          render={() => <p>Home</p>} 
+          component={Counter} 
         />
         <Route
           path="/about"
-          render={() => <p>About</p>} 
+          component={Counter} 
         />
         <Route
           path="/contact"
